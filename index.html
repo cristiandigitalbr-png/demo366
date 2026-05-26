@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emilia Goñi | Odontóloga</title>
+<meta name="description" content="Odontóloga Emilia Goñi. Atención personalizada y profesional. General Paz 377, Jovita, Córdoba. WhatsApp: 3385466342">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1e3a5f;
+    --navy-light: #2d5a8a;
+    --blue: #4a7fb5;
+    --blue-light: #7aadd4;
+    --blue-pale: #e8f2fa;
+    --mint: #a8d5e2;
+    --mint-light: #d4eef5;
+    --white: #ffffff;
+    --cream: #f5f9fc;
+    --dark: #0f1e2d;
+    --gray: #4a6070;
+    --light-gray: #c8dce8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 16px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(30,58,95,0.1);
+  }
+
+  .nav-brand { text-decoration: none; }
+
+  .nav-brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--navy);
+    display: block;
+    line-height: 1.2;
+  }
+
+  .nav-brand-sub {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--blue-light);
+    font-weight: 400;
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gray);
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--navy); }
+
+  .nav-cta {
+    background: var(--navy) !important;
+    color: white !important;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-size: 11px !important;
+  }
+
+  /* HERO */
+  .hero {
+    height: 78vh;
+    min-height: 540px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('ChatGPT Image 25 may 2026, 16_43_07.png');
+    background-size: cover;
+    background-position: center 20%;
+    filter: brightness(0.18) saturate(0.8);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+      rgba(30,58,95,0.55) 0%,
+      rgba(15,30,45,0.2) 50%,
+      rgba(15,30,45,0.65) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    padding: 60px 30px 0;
+    animation: fadeUp 1s ease-out;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--mint);
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 72px);
+    font-weight: 300;
+    color: white;
+    line-height: 1.05;
+    margin-bottom: 6px;
+  }
+
+  .hero-name-accent {
+    color: var(--mint);
+    font-style: normal;
+  }
+
+  .hero-specialty {
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-top: 18px;
+    margin-bottom: 36px;
+    font-weight: 300;
+  }
+
+  .hero-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--mint);
+    margin: 0 auto 36px;
+    opacity: 0.5;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.35);
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s;
+    backdrop-filter: blur(6px);
+  }
+
+  .btn-primary:hover {
+    background: rgba(255,255,255,0.22);
+    transform: translateY(-2px);
+  }
+
+  .btn-ghost {
+    display: inline-block;
+    padding: 14px 32px;
+    border: 1px solid rgba(168,213,226,0.4);
+    color: var(--mint);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s;
+  }
+
+  .btn-ghost:hover { background: rgba(168,213,226,0.1); }
+
+  /* SECTION */
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 3.5vw, 42px);
+    font-weight: 400;
+    color: var(--dark);
+    line-height: 1.15;
+    margin-bottom: 14px;
+  }
+
+  .section-divider {
+    width: 36px;
+    height: 1.5px;
+    background: var(--mint);
+    margin-bottom: 28px;
+    opacity: 0.8;
+  }
+
+  /* ABOUT */
+  .about-wrap {
+    background: var(--white);
+    padding: 90px 50px;
+  }
+
+  .about {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--gray);
+    margin-bottom: 16px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-image {
+    position: relative;
+    height: 480px;
+    max-width: 400px;
+    margin: 40px auto 0;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 120px 120px 20px 20px;
+    box-shadow: 0 20px 60px rgba(30,58,95,0.2), 0 4px 16px rgba(0,0,0,0.08);
+  }
+
+  .about-image-frame {
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(74,127,181,0.2);
+    border-radius: 110px 110px 14px 14px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* SERVICIOS */
+  .servicios-wrap {
+    background: var(--cream);
+    padding: 80px 50px;
+  }
+
+  .servicios {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .servicios-header {
+    text-align: center;
+    margin-bottom: 46px;
+  }
+
+  .servicios-header .section-divider { margin: 0 auto; }
+
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .servicio-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px 24px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid rgba(74,127,181,0.1);
+    box-shadow: 0 2px 12px rgba(30,58,95,0.05);
+  }
+
+  .servicio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(30,58,95,0.1);
+    border-color: var(--mint);
+  }
+
+  .servicio-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--mint-light);
+    border: 1.5px solid rgba(168,213,226,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+  }
+
+  .servicio-nombre {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .servicio-desc {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.5;
+  }
+
+  /* MID BANNER */
+  .mid-banner {
+    background: var(--navy);
+    padding: 70px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mid-banner-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image: radial-gradient(circle, white 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .mid-banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .mid-banner-content .section-label { color: var(--mint); }
+
+  .mid-banner-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(24px, 3.5vw, 40px);
+    font-weight: 300;
+    color: white;
+    margin-bottom: 12px;
+  }
+
+  .mid-banner-content p {
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    margin-bottom: 32px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  .mid-divider {
+    width: 36px;
+    height: 1px;
+    background: rgba(168,213,226,0.4);
+    margin: 0 auto 20px;
+  }
+
+  /* CONTACTO */
+  .contacto-wrap {
+    background: var(--blue-pale);
+    padding: 50px 24px 32px;
+  }
+
+  .contacto {
+    max-width: 440px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contacto .section-divider { margin: 0 auto 28px; }
+
+  .contacto-items { display: flex; flex-direction: column; }
+
+  .contacto-item {
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(74,127,181,0.15);
+  }
+
+  .contacto-item:last-child { border-bottom: none; }
+
+  .contacto-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .contacto-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    color: var(--dark);
+  }
+
+  .contacto-value a {
+    color: var(--navy);
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    text-align: center;
+    padding: 40px 24px;
+  }
+
+  .footer-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--mint);
+    margin-bottom: 4px;
+  }
+
+  .footer-sub {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(168,213,226,0.35);
+    margin-bottom: 16px;
+  }
+
+  .footer-divider {
+    width: 32px;
+    height: 1px;
+    background: rgba(168,213,226,0.2);
+    margin: 0 auto 16px;
+  }
+
+  .footer-text {
+    font-size: 12px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .about-wrap { padding: 50px 20px; }
+    .about-image { height: 380px; max-width: 300px; }
+    .servicios-wrap { padding: 50px 20px; }
+    .servicios-grid { grid-template-columns: repeat(2, 1fr); }
+    .mid-banner { padding: 50px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#inicio" class="nav-brand">
+    <span class="nav-brand-name">Emilia Goñi</span>
+    <span class="nav-brand-sub">Odontóloga · Jovita</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#nosotros">Quién Soy</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+    <li><a href="https://wa.me/543385466342" target="_blank" class="nav-cta">Turno</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Jovita · Córdoba</div>
+    <h1 class="hero-name">Emilia <span class="hero-name-accent">Goñi</span></h1>
+    <div class="hero-specialty">Odontología General</div>
+    <div class="hero-divider"></div>
+    <div class="hero-buttons">
+      <a href="https://wa.me/543385466342" target="_blank" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Reservar Turno
+      </a>
+      <a href="#nosotros" class="btn-ghost">Conocerme</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="about-wrap" id="nosotros">
+  <div class="about">
+    <div class="about-text">
+      <div class="section-label">Quién Soy</div>
+      <h2 class="section-title" style="font-size:clamp(22px,3vw,36px);">Emilia Goñi</h2>
+      <div class="section-divider" style="margin:0 auto 28px;"></div>
+      <p>Soy odontóloga recibida en 2022 de la Universidad Nacional de Córdoba, con vocación genuina por el cuidado de la salud bucal de cada paciente.</p>
+      <p>Me caracterizo por la dedicación constante y el compromiso de seguir aprendiendo y mejorando, porque creo que una buena atención odontológica parte de la confianza y el trato cercano.</p>
+      <p>Mi objetivo es que cada persona que venga a la consulta se sienta cómoda, tranquila y bien cuidada.</p>
+    </div>
+    <div class="about-image">
+      <img src="emilia-goni.jpg" alt="Emilia Goñi Odontóloga">
+      <div class="about-image-frame"></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICIOS -->
+<div class="servicios-wrap" id="servicios">
+  <div class="servicios">
+    <div class="servicios-header">
+      <div class="section-label">Lo que ofrezco</div>
+      <h2 class="section-title">Servicios</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="servicios-grid">
+      <div class="servicio-card">
+        <div class="servicio-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4a7fb5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="servicio-nombre">Consulta General</div>
+        <div class="servicio-desc">Revisión completa y diagnóstico de tu salud bucal</div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4a7fb5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="servicio-nombre">Limpieza Dental</div>
+        <div class="servicio-desc">Profilaxis y eliminación de sarro para una boca sana</div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4a7fb5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <div class="servicio-nombre">Estética Dental</div>
+        <div class="servicio-desc">Blanqueamiento y mejora de tu sonrisa</div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4a7fb5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg>
+        </div>
+        <div class="servicio-nombre">Ortodoncia</div>
+        <div class="servicio-desc">Corrección y alineación dental</div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4a7fb5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div class="servicio-nombre">Endodoncia</div>
+        <div class="servicio-desc">Tratamiento de conductos radiculares</div>
+      </div>
+      <div class="servicio-card">
+        <div class="servicio-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#4a7fb5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        </div>
+        <div class="servicio-nombre">Odontopediatría</div>
+        <div class="servicio-desc">Atención dental especializada para niños</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MID BANNER -->
+<div class="mid-banner">
+  <div class="mid-banner-pattern"></div>
+  <div class="mid-banner-content">
+    <div class="section-label">Contacto Directo</div>
+    <div class="mid-divider"></div>
+    <h2>¿Querés reservar un turno?</h2>
+    <p>Escribime por WhatsApp y te respondo a la brevedad. Tu sonrisa es mi prioridad.</p>
+    <a href="https://wa.me/543385466342" target="_blank" class="btn-primary" style="display:inline-flex; background:rgba(0,0,0,0.3); border:1px solid rgba(255,255,255,0.25); backdrop-filter:blur(4px);">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      Hacé tu consulta
+    </a>
+  </div>
+</div>
+
+<!-- CONTACTO -->
+<div class="contacto-wrap" id="contacto">
+  <div class="contacto">
+    <div class="section-label">Contacto</div>
+    <h2 class="section-title" style="font-size:clamp(22px,3vw,34px);">Encontranos</h2>
+    <div class="section-divider"></div>
+    <div class="contacto-items">
+      <div class="contacto-item">
+        <div class="contacto-label">Dirección</div>
+        <div class="contacto-value" style="font-size:16px;">General Paz 377, Jovita, Córdoba</div>
+      </div>
+      <div class="contacto-item">
+        <div class="contacto-label">WhatsApp</div>
+        <div class="contacto-value">
+          <a href="https://wa.me/543385466342">3385-466342</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-name">Emilia Goñi</div>
+  <div class="footer-sub">Odontóloga · Jovita, Córdoba</div>
+  <div class="footer-divider"></div>
+  <div class="footer-text">
+    General Paz 377, Jovita, Córdoba · WhatsApp: 3385-466342<br>
+    <span style="font-size:11px; color:rgba(255,255,255,0.2); margin-top:10px; display:block;">© 2025 · Todos los derechos reservados</span>
+  </div>
+</footer>
+
+</body>
+</html>
